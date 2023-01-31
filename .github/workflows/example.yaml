@@ -17,7 +17,7 @@ jobs:
           kubectl apply -f testdata/kubernetes/demo.yaml
       - name: Wait until Redis is available
         run: |
-          kubectl wait deployment -n demo-app demo-redis-server --for condition=Available=True --timeout=90s
+          kubectl wait statefulset -n demo-app demo-redis-server --for condition=Available=True --timeout=90s
       - name: Check result
         run: |
           kubectl get all -A
