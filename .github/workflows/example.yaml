@@ -1,5 +1,5 @@
 name: nsca
-on: [push]
+on: [push, workflow_dispatch]
 
 permissions:
   id-token: write # This is required for requesting the JWT
