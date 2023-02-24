@@ -1,4 +1,4 @@
-name: nsca
+name: example
 on: [push, workflow_dispatch]
 
 permissions:
